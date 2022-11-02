@@ -9,6 +9,21 @@ body {
     src: url(./font/Alphabetfriends-Regular.ttf);
 }
 
+.modal {
+    background-color: black;
+    position: relative;
+    top: 0;
+    border: 5px dotted white;
+}
+
+.modal-two {
+    display: none;
+    background-color: black;
+    position: relative;
+    bottom: 200%;
+    border: 5px dotted white;
+}
+
 .title,
 .footer {
     text-align: center;
