@@ -8,20 +8,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Modal -->
+    <header class="modal">
+        <h1 class="title">DONT LOOK FOR "F"</h1>
+        <button class="btn" id="start-btn">Start Game</button>
+    </header>
+
     <!-- player score -->
-    <h1 class="title">DONT LOOK FOR "F"</h1>
-    <header class="container">
+    <div class="container">
         <h1 id="player-one">Player 1</h1>
         <h1 id="player-two">Player 2</h1>
-    </header>
+    </div>
+    
     <!-- cards -->
     <div class="root-container" id="root"></div>
+    
     <!-- footer -->
+    <div class="modal-two">
     <h1 class="footer">THANKS for PLAYING</h1>
-    <div class="footer-img" >
-        <img src="./images/y.gif" alt="Alphabet Lore Y yelling">
-        <img src="./images/z.gif" alt="Alphabet Lore Z sleeping">
+        <div class="footer-img" >
+            <img src="./images/y.gif" alt="Alphabet Lore Y yelling">
+            <img src="./images/z.gif" alt="Alphabet Lore Z sleeping">
+        </div>
+        <button class="class" id="reset-btn">Reset Game</button>
     </div>  
+    
     <!-- script -->
     <script src="app.js" type="module"></script>
 </body>
