@@ -7,18 +7,21 @@
     <!-- css -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header Modal -->
     <header class="modal">
         <h1 class="title">DONT LOOK FOR "F"</h1>
-        <button class="btn" id="start-btn">Start Game</button>
+        <div class="start-btn">
+            <button id="start-btn">Start Game</button>
+        </div> 
     </header>
 
     <!-- player score -->
     <div class="container">
-        <h1 id="player-one">Player 1</h1>
-        <button id="roll-dice">Roll Dice</button>
-        <h1 id="player-two">Player 2</h1>
+        <h1 class="player-one active">Player 1</h1>
+        <button id="roll-dice" class="dice">Roll Dice</button>
+        <h1 class="player-two">Player 2</h1>
     </div>
     
     <!-- cards -->
@@ -26,13 +29,16 @@
     
     <!-- fail modal -->
     <div class="fail-modal">
-        <h1>YOU LOSE</h1>
+        <h1 class="fail-text">YOU LOSE</h1>
         <img src="./images/f.gif" />
     </div>  
+
     <!-- footer -->
-    <div class="modal-two">
+    <div class="modal-footer">
         <h1 class="footer">THANKS for PLAYING</h1>
-        <button class="class" id="reset-btn">Reset Game</button>
+        <div class="reset-btn">
+            <button id="reset-btn">Reset Game</button>
+        </div>
         <div class="footer-img" >
             <img class="end-img" src="./images/y.gif" alt="Alphabet Lore Y yelling">
             <img class="end-img" src="./images/z.gif" alt="Alphabet Lore Z sleeping">
