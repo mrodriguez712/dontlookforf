@@ -9,59 +9,7 @@ body {
     src: url(./font/Alphabetfriends-Regular.ttf);
 }
 
-.modal {
-    background-color: black;
-    position: relative;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border: 5px dotted white;
-}
-
-.modal-two {
-    display: none;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border: 5px dotted white;
-}
-
-
-.fail-modal {
-    display: none;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.title,
-.footer {
-    text-align: center;
-    font-size: 80px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.root-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: .5rem;
-}
+/* layout */
 
 img {
     width: 100%;
@@ -70,14 +18,103 @@ img {
 button {
     background-color: black;
     color: white;
-    width: 10%;
+    width: 20%;
     border: 3px white dashed;
     border-radius: 20px;
     font-size: 20px;
 }
 
+.footer {
+    margin-bottom: 0;
+}
+
+.title,
+.footer {
+    text-align: center;
+    font-size: 80px;
+}
+
+/* header modal */
+.modal {
+    /* display: none; */
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 5px dotted white;
+    z-index: 100;
+}
+
+.start-btn,
+.reset-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/* fail modal */
+.fail-modal {
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+}
+
+.fail-text {
+    text-align: center;
+}
+
+/* player container */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.player-one,
+.player-two {
+    text-shadow: 2px 2px 2px black;
+    padding: 5px;
+}
+
+.active {
+    background-color: rgb(143, 143, 74);
+    border-radius: 10px;
+}
+
+.dice {
+    z-index: 90;
+}
+
+/* cards root */
+.root-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5rem;
+}
+
+/* modal two */
+.modal-footer {
+    display: none;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 5px dotted white;
+    z-index: 99;
+}
+
 .end-img {
     width: 50%;
+    margin-top: 20px;
 }
 
 .footer-img {
@@ -88,8 +125,34 @@ button {
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     img {
         width: 100px;
     }
+
+    .container {
+        font-size: 10px;
+        text-align: center;
+        margin: 20px;
+    }
+
+    .dice {
+        font-size: 15px;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .end-img {
+        width: 200px;
+    }
+
+    .title,
+    .footer {
+    text-align: center;
+    font-size: 40px;
+}
 }
