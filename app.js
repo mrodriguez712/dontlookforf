@@ -23,6 +23,8 @@ document.getElementById('start-btn').addEventListener('click', () => {
     createBoard()
 })
 
+// createBoard()
+
 document.getElementById('reset-btn').addEventListener('click', () => {
     modal.style.display = "block"
     modalFooter.style.display = "none"
@@ -30,12 +32,10 @@ document.getElementById('reset-btn').addEventListener('click', () => {
 })
 
 // dice roll
-function rollDice() {
-    return Math.floor(Math.random() * 3 + 1)
-}
-
 dice.addEventListener('click', () => {
-    dice.textContent = rollDice()
+    dice.textContent = Math.floor(Math.random() * 3 + 1)
+    dice.disabled = true
+    dice.style.backgroundColor = '#282828'
 })
 
 // the game
@@ -44,7 +44,6 @@ root.addEventListener('click', () => {
     const diceContent = dice.textContent
     const number = Number(diceContent)
 
-    console.log(clicks)
     if(playerOne.classList.contains('active')) {
         if(clicks === number) {
             console.log('they match')
@@ -52,6 +51,7 @@ root.addEventListener('click', () => {
             playerOne.classList.remove('active')
             playerTwo.classList.add('active')
             dice.textContent = `Player 2 turn`
+            dice.disabled = false
         } 
     } 
     
@@ -62,6 +62,7 @@ root.addEventListener('click', () => {
             playerTwo.classList.remove('active')
             playerOne.classList.add('active')
             dice.textContent = `Player 1 turn`
+            dice.disabled = false
         }
     }
 })
@@ -75,6 +76,8 @@ function createBoard() {
         card.addEventListener('click', flipCard)
         root.appendChild(card)
     }
+
+  
 }
 
 function flipCard() {
@@ -82,7 +85,7 @@ function flipCard() {
     let audio = new Audio('./audio/fail.m4a')  
     cardChosen.push(cards[cardId].name)
     this.setAttribute('src', cards[cardId].image)
-    console.log(cardChosen)
+
     if(cards[cardId].name === 'f') {
         fail.style.display = 'block'
         audio.play()
@@ -93,4 +96,10 @@ function flipCard() {
             modalFooter.style.display = "block"
         }, 5000)   
     }
+
+    // setTimeout(() => {
+    //     cardChosen.pop(cards[cardId].name)
+    //     this.removeAttribute('src', cards[cardId].image)
+    //     this.setAttribute('class', 'black')
+    // }, 1000)
 }

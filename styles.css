@@ -22,6 +22,7 @@ button {
     border: 3px white dashed;
     border-radius: 20px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .footer {
@@ -53,6 +54,21 @@ button {
     justify-content: center;
 }
 
+.rule-book {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    line-height: 2;
+}
+
 /* fail modal */
 .fail-modal {
     display: none;
@@ -63,10 +79,14 @@ button {
     left: 0;
     right: 0;
     z-index: 98;
+    background: url('./images/f.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .fail-text {
     text-align: center;
+    color: black;
 }
 
 /* player container */
@@ -87,10 +107,9 @@ button {
     border-radius: 10px;
 }
 
-.dice {
-    z-index: 90;
+.black {
+    background-color: black;
 }
-
 /* cards root */
 .root-container {
     display: grid;
@@ -126,6 +145,7 @@ button {
 }
 
 @media screen and (max-width: 500px) {
+    
     img {
         width: 100px;
     }
