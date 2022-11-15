@@ -7,9 +7,17 @@ const fail = document.querySelector('.fail-modal')
 const dice = document.getElementById('roll-dice')
 const playerOne = document.querySelector('.player-one')
 const playerTwo = document.querySelector('.player-two')
-
+const audio = document.querySelector('#audio-open')
 let clicks = 0;
 const cardChosen = []
+
+// window.onload = function() {
+//     audio.muted = true
+//     audio.play()
+// }
+modal.addEventListener('mousemove', function() {
+    audio.play()
+})
 
 // buttons
 document.getElementById('start-btn').addEventListener('click', () => {
@@ -21,6 +29,8 @@ document.getElementById('start-btn').addEventListener('click', () => {
         cards[j] = temp
     }
     createBoard()
+
+    audio.pause()
 })
 
 // createBoard()
@@ -96,10 +106,4 @@ function flipCard() {
             modalFooter.style.display = "block"
         }, 5000)   
     }
-
-    // setTimeout(() => {
-    //     cardChosen.pop(cards[cardId].name)
-    //     this.removeAttribute('src', cards[cardId].image)
-    //     this.setAttribute('class', 'black')
-    // }, 1000)
 }

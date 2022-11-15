@@ -78,10 +78,9 @@ ul {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 98;
+    /* z-index: 101; */
     background: url('./images/f.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
 }
 
 .fail-text {
@@ -94,6 +93,10 @@ ul {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    background-color: black;
 }
 
 .player-one,
